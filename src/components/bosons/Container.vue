@@ -1,18 +1,21 @@
 <template>
-  <HomeTemplate />
+  <div class="container">
+    <slot />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { HomeTemplate } from '@/components/templates'
 
 export default defineComponent({
-  components: { HomeTemplate }
+  name: 'Container'
 })
 </script>
 
 <style lang="scss" scoped>
-.component {
-  margin: 5rem;
+.container {
+  width: 85%;
+  max-width: 1150px;
+  margin: 0 auto;
 }
 </style>
